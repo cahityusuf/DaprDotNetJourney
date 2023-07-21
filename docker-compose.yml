@@ -1,15 +1,34 @@
 version: '3.4'
 
 services:
+
+  zipkin:
+    image: openzipkin/zipkin-slim:latest
+
+  dapr-placement:
+    image: "daprio/dapr:1.9.4"
+
   daprdotnetjourney.microservices.basket.api:
-    image: ${DOCKER_REGISTRY-}daprdotnetjourneymicroservicesbasketapi
+    image: cahityusuf/daprdotnetjourneymicroservicesbasketapi:dev
     build:
       context: .
-      dockerfile: src/Microservices/BasketAPI/DaprDotNetJourney.Microservices.Basket.Api/Dockerfile
+      dockerfile: Dockerfile.BasketApi
+
+  daprdotnetjourney.microservices.basket.api.dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:daprdotnetjourney.microservices.basket.api"
+    depends_on:
+      - daprdotnetjourney.microservices.basket.api
 
   daprdotnetjourney.gateway.aggregator.api:
-    image: ${DOCKER_REGISTRY-}daprdotnetjourneygatewayaggregatorapi
+    image: cahityusuf/daprdotnetjourneygatewayaggregatorapi:dev
     build:
       context: .
-      dockerfile: src/Gateways/Aggregators/DaprDotNetJourney.Gateway.Aggregator.Api/Dockerfile
+      dockerfile: Dockerfile.Aggregator
+
+  daprdotnetjourney.gateway.aggregator.api.dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:daprdotnetjourney.gateway.aggregator.api"
+    depends_on:
+      - daprdotnetjourney.gateway.aggregator.api
 

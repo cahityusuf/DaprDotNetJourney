@@ -1,23 +1,46 @@
 version: '3.4'
 
 services:
+
+  zipkin:
+    ports:
+      - "5411:9411"
+
+  dapr-placement:
+    command: ["./placement", "-port", "50000", "-log-level", "debug"]
+    ports:
+      - "50000:50000"
+
   daprdotnetjourney.microservices.basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://0.0.0.0:80
     ports:
-      - "80"
-      - "443"
+      - "5001:80"
+      - "50001:50001"
+
+  daprdotnetjourney.microservices.basket.api.dapr:
+    command: ["./daprd",
+      "-app-id", "daprdotnetjourney.microservices.basket.api",
+      "-app-port", "80",
+      "-config", "/configuration/config.yaml"
+      ]
     volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - "./dapr/configuration/:/configuration"
+
   daprdotnetjourney.gateway.aggregator.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://0.0.0.0:80
     ports:
-      - "80"
-      - "443"
+      - "5002:80"
+      - "50002:50002"
+
+  daprdotnetjourney.gateway.aggregator.api.dapr:
+    command: ["./daprd",
+      "-app-id", "daprdotnetjourney.gateway.aggregator.api",
+      "-app-port", "80",
+      "-config", "/configuration/config.yaml"
+      ]
     volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - "./dapr/configuration/:/configuration"

@@ -6,7 +6,7 @@ metadata:
   labels:
     app: basketapi
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: basketapi
-        image: pairacr.azurecr.io/basketapi:$(Build.BuildId)
+        image: cahityusuf/basketapi:v1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80

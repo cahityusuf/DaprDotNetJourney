@@ -18,25 +18,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		dapr\configuration\config.yaml = dapr\configuration\config.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Framework.Api", "src\Framework\DaprDotNetJourney.Framework.Api\DaprDotNetJourney.Framework.Api.csproj", "{83C77CA0-4502-445E-AD31-CA5A292E6FE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Framework.Api", "src\Framework\DaprDotNetJourney.Framework.Api\DaprDotNetJourney.Framework.Api.csproj", "{83C77CA0-4502-445E-AD31-CA5A292E6FE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Framework.Abstractions", "src\Framework\DaprDotNetJourney.Framework.Abstractions\DaprDotNetJourney.Framework.Abstractions.csproj", "{20768AD4-C797-4F94-9AD4-A266553D7CB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Framework.Abstractions", "src\Framework\DaprDotNetJourney.Framework.Abstractions\DaprDotNetJourney.Framework.Abstractions.csproj", "{20768AD4-C797-4F94-9AD4-A266553D7CB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aggregators", "Aggregators", "{D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketAPI", "BasketAPI", "{F9CA0C7E-46EB-4063-9141-4E23BB761FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Api", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Api\DaprDotNetJourney.Microservices.Basket.Api.csproj", "{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Microservices.Basket.Api", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Api\DaprDotNetJourney.Microservices.Basket.Api.csproj", "{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Abstraction", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Abstraction\DaprDotNetJourney.Microservices.Basket.Abstraction.csproj", "{9698ED80-B78F-4272-8E19-146292A88FC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Microservices.Basket.Abstraction", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Abstraction\DaprDotNetJourney.Microservices.Basket.Abstraction.csproj", "{9698ED80-B78F-4272-8E19-146292A88FC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Application", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Application\DaprDotNetJourney.Microservices.Basket.Application.csproj", "{C6C8C596-0865-4493-B2BE-4B55CA5864CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Microservices.Basket.Application", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Application\DaprDotNetJourney.Microservices.Basket.Application.csproj", "{C6C8C596-0865-4493-B2BE-4B55CA5864CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Api", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Api\DaprDotNetJourney.Gateway.Aggregator.Api.csproj", "{012B927B-228F-411F-BF9C-CF1F2985B056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Gateway.Aggregator.Api", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Api\DaprDotNetJourney.Gateway.Aggregator.Api.csproj", "{012B927B-228F-411F-BF9C-CF1F2985B056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Abstraction", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Abstraction\DaprDotNetJourney.Gateway.Aggregator.Abstraction.csproj", "{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Gateway.Aggregator.Abstraction", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Abstraction\DaprDotNetJourney.Gateway.Aggregator.Abstraction.csproj", "{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Application", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Application\DaprDotNetJourney.Gateway.Aggregator.Application.csproj", "{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Gateway.Aggregator.Application", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Application\DaprDotNetJourney.Gateway.Aggregator.Application.csproj", "{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{220404AF-831B-4611-9E3E-015380A7722C}"
 EndProject
@@ -56,6 +56,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketApi", "BasketApi", "{
 		k8s\basketapi\basketapi-deployment.yaml = k8s\basketapi\basketapi-deployment.yaml
 		k8s\basketapi\basketapi-ingress.yaml = k8s\basketapi\basketapi-ingress.yaml
 		k8s\basketapi\basketapi-service.yaml = k8s\basketapi\basketapi-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{304903F2-3ADB-4C88-ABBB-486E773DF56A}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile.Aggregator = Dockerfile.Aggregator
+		Dockerfile.BasketApi = Dockerfile.BasketApi
 	EndProjectSection
 EndProject
 Global
