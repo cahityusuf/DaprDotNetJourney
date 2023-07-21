@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  daprdotnetjourney.microservices.basket.api:
+    image: ${DOCKER_REGISTRY-}daprdotnetjourneymicroservicesbasketapi
+    build:
+      context: .
+      dockerfile: src/Microservices/BasketAPI/DaprDotNetJourney.Microservices.Basket.Api/Dockerfile
+
+  daprdotnetjourney.gateway.aggregator.api:
+    image: ${DOCKER_REGISTRY-}daprdotnetjourneygatewayaggregatorapi
+    build:
+      context: .
+      dockerfile: src/Gateways/Aggregators/DaprDotNetJourney.Gateway.Aggregator.Api/Dockerfile
+

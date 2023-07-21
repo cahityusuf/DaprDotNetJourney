@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>9fc4e681-e52a-4407-84d6-52f1ccb19ae1</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..\..</DockerfileContext>
+		<DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+		<PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="7.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+		<PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Framework\DaprDotNetJourney.Framework.Api\DaprDotNetJourney.Framework.Api.csproj" />
+	  <ProjectReference Include="..\DaprDotNetJourney.Gateway.Aggregator.Abstraction\DaprDotNetJourney.Gateway.Aggregator.Abstraction.csproj" />
+	  <ProjectReference Include="..\DaprDotNetJourney.Gateway.Aggregator.Application\DaprDotNetJourney.Gateway.Aggregator.Application.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,126 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapr", "Dapr", "{87D63FA3-7B34-45B3-B8A3-49F2EC237E1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{60599782-A838-4435-88FF-F10FEB3A0CCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B58F4743-DF43-4F2F-B9F9-F17AA1918FAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C483880D-1DD1-46DD-AF59-008CD54BA6FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{818EA871-70D9-4BB7-BD99-F90EABCA1303}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{391ECD26-CE5F-46E5-B610-822F9FC49325}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\configuration\config.yaml = dapr\configuration\config.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Framework.Api", "src\Framework\DaprDotNetJourney.Framework.Api\DaprDotNetJourney.Framework.Api.csproj", "{83C77CA0-4502-445E-AD31-CA5A292E6FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Framework.Abstractions", "src\Framework\DaprDotNetJourney.Framework.Abstractions\DaprDotNetJourney.Framework.Abstractions.csproj", "{20768AD4-C797-4F94-9AD4-A266553D7CB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aggregators", "Aggregators", "{D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketAPI", "BasketAPI", "{F9CA0C7E-46EB-4063-9141-4E23BB761FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Api", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Api\DaprDotNetJourney.Microservices.Basket.Api.csproj", "{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Abstraction", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Abstraction\DaprDotNetJourney.Microservices.Basket.Abstraction.csproj", "{9698ED80-B78F-4272-8E19-146292A88FC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Microservices.Basket.Application", "src\Microservices\BasketAPI\DaprDotNetJourney.Microservices.Basket.Application\DaprDotNetJourney.Microservices.Basket.Application.csproj", "{C6C8C596-0865-4493-B2BE-4B55CA5864CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Api", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Api\DaprDotNetJourney.Gateway.Aggregator.Api.csproj", "{012B927B-228F-411F-BF9C-CF1F2985B056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Abstraction", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Abstraction\DaprDotNetJourney.Gateway.Aggregator.Abstraction.csproj", "{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Gateway.Aggregator.Application", "src\Gateways\Aggregators\DaprDotNetJourney.Gateway.Aggregator.Application\DaprDotNetJourney.Gateway.Aggregator.Application.csproj", "{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{220404AF-831B-4611-9E3E-015380A7722C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8s", "K8s", "{ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AggregatorApi", "AggregatorApi", "{5C2ABDDF-6A27-46A7-B7E3-C22D25C4EE80}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\aggregatorapi\aggregator-configmap.yaml = k8s\aggregatorapi\aggregator-configmap.yaml
+		k8s\aggregatorapi\aggregator-deployment.yaml = k8s\aggregatorapi\aggregator-deployment.yaml
+		k8s\aggregatorapi\aggregator-ingress.yaml = k8s\aggregatorapi\aggregator-ingress.yaml
+		k8s\aggregatorapi\aggregator-service.yaml = k8s\aggregatorapi\aggregator-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketApi", "BasketApi", "{F463CD69-11CA-4DBD-95BA-98AF7E220571}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\basketapi\basketapi-configmap.yaml = k8s\basketapi\basketapi-configmap.yaml
+		k8s\basketapi\basketapi-deployment.yaml = k8s\basketapi\basketapi-deployment.yaml
+		k8s\basketapi\basketapi-ingress.yaml = k8s\basketapi\basketapi-ingress.yaml
+		k8s\basketapi\basketapi-service.yaml = k8s\basketapi\basketapi-service.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83C77CA0-4502-445E-AD31-CA5A292E6FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C77CA0-4502-445E-AD31-CA5A292E6FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C77CA0-4502-445E-AD31-CA5A292E6FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C77CA0-4502-445E-AD31-CA5A292E6FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20768AD4-C797-4F94-9AD4-A266553D7CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20768AD4-C797-4F94-9AD4-A266553D7CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20768AD4-C797-4F94-9AD4-A266553D7CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20768AD4-C797-4F94-9AD4-A266553D7CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9698ED80-B78F-4272-8E19-146292A88FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9698ED80-B78F-4272-8E19-146292A88FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9698ED80-B78F-4272-8E19-146292A88FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9698ED80-B78F-4272-8E19-146292A88FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C8C596-0865-4493-B2BE-4B55CA5864CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C8C596-0865-4493-B2BE-4B55CA5864CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C8C596-0865-4493-B2BE-4B55CA5864CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C8C596-0865-4493-B2BE-4B55CA5864CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012B927B-228F-411F-BF9C-CF1F2985B056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012B927B-228F-411F-BF9C-CF1F2985B056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012B927B-228F-411F-BF9C-CF1F2985B056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012B927B-228F-411F-BF9C-CF1F2985B056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220404AF-831B-4611-9E3E-015380A7722C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220404AF-831B-4611-9E3E-015380A7722C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220404AF-831B-4611-9E3E-015380A7722C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220404AF-831B-4611-9E3E-015380A7722C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{818EA871-70D9-4BB7-BD99-F90EABCA1303} = {87D63FA3-7B34-45B3-B8A3-49F2EC237E1E}
+		{391ECD26-CE5F-46E5-B610-822F9FC49325} = {87D63FA3-7B34-45B3-B8A3-49F2EC237E1E}
+		{83C77CA0-4502-445E-AD31-CA5A292E6FE9} = {B58F4743-DF43-4F2F-B9F9-F17AA1918FAD}
+		{20768AD4-C797-4F94-9AD4-A266553D7CB5} = {B58F4743-DF43-4F2F-B9F9-F17AA1918FAD}
+		{D3CF6EE2-F964-4AB7-9625-C2E86A4D5149} = {60599782-A838-4435-88FF-F10FEB3A0CCA}
+		{F9CA0C7E-46EB-4063-9141-4E23BB761FEE} = {C483880D-1DD1-46DD-AF59-008CD54BA6FA}
+		{8B14EF43-5EE0-4CBB-AAEB-9FBCB6E81FAE} = {F9CA0C7E-46EB-4063-9141-4E23BB761FEE}
+		{9698ED80-B78F-4272-8E19-146292A88FC0} = {F9CA0C7E-46EB-4063-9141-4E23BB761FEE}
+		{C6C8C596-0865-4493-B2BE-4B55CA5864CE} = {F9CA0C7E-46EB-4063-9141-4E23BB761FEE}
+		{012B927B-228F-411F-BF9C-CF1F2985B056} = {D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}
+		{6C00B20F-8B4E-46D0-ADEF-745BAFF89C35} = {D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}
+		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1} = {D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}
+		{5C2ABDDF-6A27-46A7-B7E3-C22D25C4EE80} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
+		{F463CD69-11CA-4DBD-95BA-98AF7E220571} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC37AB1C-64B4-40F4-92EA-0DE7B6508029}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basketapi-deployment
+  namespace: daprdotnetjourney
+  labels:
+    app: basketapi
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      service: basketapi
+  template:
+    metadata:
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: basketapi
+        dapr.io/app-port: "80"
+        dapr.io/config: "config"
+      labels:
+        app: basketapi
+        service: basketapi
+    spec:
+      containers:
+      - name: basketapi
+        image: pairacr.azurecr.io/basketapi:$(Build.BuildId)
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "0.3"
+          limits:
+            memory: "2048Mi"
+            cpu: "1"
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+
