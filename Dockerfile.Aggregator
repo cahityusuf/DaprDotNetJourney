@@ -18,7 +18,7 @@ WORKDIR "/src/src/Gateways/Aggregators/DaprDotNetJourney.Gateway.Aggregator.Api"
 RUN dotnet build "DaprDotNetJourney.Gateway.Aggregator.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DaprDotNetJourney.Gateway.Aggregator.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "DaprDotNetJourney.Gateway.Aggregator.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app

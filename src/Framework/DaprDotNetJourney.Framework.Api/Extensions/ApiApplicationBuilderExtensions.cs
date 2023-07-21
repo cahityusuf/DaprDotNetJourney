@@ -24,6 +24,7 @@ namespace DaprDotNetJourney.Framework.Api.Extensions
 
         public static void UseCustomRoute(this WebApplication app)
         {
+            app.UseCloudEvents();
             app.MapDefaultControllerRoute();
             app.MapControllers();
         }

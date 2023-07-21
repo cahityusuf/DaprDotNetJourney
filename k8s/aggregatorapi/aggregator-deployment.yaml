@@ -6,7 +6,7 @@ metadata:
   labels:
     app: aggregator
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: aggregator
-        image: pairacr.azurecr.io/aggregator:$(Build.BuildId)
+        image: cahityusuf/aggregatorapi:v1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
