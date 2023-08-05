@@ -20,7 +20,6 @@ namespace DaprDotNetJourney.Microservices.Basket.Api
         public static void AddCustomApplicationServices(this WebApplicationBuilder builder)
         {
             builder.Services.AddScoped<IBasketService, BasketService>();
-
         }
 
         public static WebApplication UseBasketApi(this WebApplication app)

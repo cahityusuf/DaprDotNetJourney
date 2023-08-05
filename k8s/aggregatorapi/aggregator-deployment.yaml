@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: aggregator
-        image: cahityusuf/aggregatorapi:v1.0.0
+        image: docker.io/cahityusuf/aggregator-api:v1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -38,11 +38,11 @@ spec:
             memory: "500Mi"
             cpu: "0.3"
           limits:
-            memory: "2048Mi"
-            cpu: "1"
+            memory: "500Mi"
+            cpu: "0.5"
         env:
         - name: ASPNETCORE_ENVIRONMENT
-          value: Production
+          value: Development
         - name: ASPNETCORE_URLS
           value: http://+:80
 

@@ -8,11 +8,13 @@ namespace DaprDotNetJourney.Microservices.Basket.Application.Services
     {
         public async Task<Result<BasketDto>> UpdateBasketAsync(BasketDto basket)
         {
+            basket.Items.ForEach(x => Console.WriteLine(x.ProductId+" ===== "+ x.ProductName + " ===== " + x.UnitPrice));
+
             return new SuccessResult<BasketDto>(basket)
             {
                 Messages = new List<string>
                 {
-                    "Ürün sepete kaydedildi"
+                    $"{basket.Items.Count} sayıda ürün sepete kaydedildi"
                 }
             };
         }
