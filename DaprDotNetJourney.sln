@@ -44,7 +44,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8s", "K8s", "{ACCF989C-6B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AggregatorApi", "AggregatorApi", "{5C2ABDDF-6A27-46A7-B7E3-C22D25C4EE80}"
 	ProjectSection(SolutionItems) = preProject
-		k8s\aggregatorapi\aggregator-configmap.yaml = k8s\aggregatorapi\aggregator-configmap.yaml
 		k8s\aggregatorapi\aggregator-deployment.yaml = k8s\aggregatorapi\aggregator-deployment.yaml
 		k8s\aggregatorapi\aggregator-ingress.yaml = k8s\aggregatorapi\aggregator-ingress.yaml
 		k8s\aggregatorapi\aggregator-service.yaml = k8s\aggregatorapi\aggregator-service.yaml
@@ -52,7 +51,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AggregatorApi", "Aggregator
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketApi", "BasketApi", "{F463CD69-11CA-4DBD-95BA-98AF7E220571}"
 	ProjectSection(SolutionItems) = preProject
-		k8s\basketapi\basketapi-configmap.yaml = k8s\basketapi\basketapi-configmap.yaml
 		k8s\basketapi\basketapi-deployment.yaml = k8s\basketapi\basketapi-deployment.yaml
 		k8s\basketapi\basketapi-ingress.yaml = k8s\basketapi\basketapi-ingress.yaml
 		k8s\basketapi\basketapi-service.yaml = k8s\basketapi\basketapi-service.yaml
@@ -62,6 +60,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Dockerfile.Aggregator = Dockerfile.Aggregator
 		Dockerfile.BasketApi = Dockerfile.BasketApi
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingress", "Ingress", "{67B85340-05C0-4FFC-ADB7-38A5D6DEB94F}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\ingress\microservices-ingress.yaml = k8s\ingress\microservices-ingress.yaml
+		k8s\ingress\zipkin-ingress.yaml = k8s\ingress\zipkin-ingress.yaml
 	EndProjectSection
 EndProject
 Global
@@ -125,6 +129,7 @@ Global
 		{A2D1D842-96E5-425C-A77A-4BC933CAD3D1} = {D3CF6EE2-F964-4AB7-9625-C2E86A4D5149}
 		{5C2ABDDF-6A27-46A7-B7E3-C22D25C4EE80} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
 		{F463CD69-11CA-4DBD-95BA-98AF7E220571} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
+		{67B85340-05C0-4FFC-ADB7-38A5D6DEB94F} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC37AB1C-64B4-40F4-92EA-0DE7B6508029}

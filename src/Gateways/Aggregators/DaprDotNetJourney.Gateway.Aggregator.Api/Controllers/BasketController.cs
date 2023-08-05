@@ -11,7 +11,6 @@ namespace DaprDotNetJourney.Gateway.Aggregator.Api.Controllers;
 [ApiController]
 public class BasketController : ControllerBase
 {
-
     private readonly IBasketService _basket;
     public BasketController(IBasketService basket)
     {

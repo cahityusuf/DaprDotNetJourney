@@ -20,7 +20,7 @@ namespace Web.HttpAggregator.Api.Helpers
         public static void AddCustomApplicationServices(this WebApplicationBuilder builder)
         {
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            builder.Services.AddSingleton<IBasketService, BasketService>();
+            builder.Services.AddScoped<IBasketService, BasketService>();
         }
 
         public static WebApplication UseHttpAggregatorApi(this WebApplication app)

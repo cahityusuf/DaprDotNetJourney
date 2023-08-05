@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: daprdotnetjourney-ingress
+  namespace: daprdotnetjourney
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: basket.daprdotnetjourney.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: basket-svc
+            port:
+              number: 80
+  - host: aggregator.daprdotnetjourney.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aggregator-svc
+            port:
+              number: 80

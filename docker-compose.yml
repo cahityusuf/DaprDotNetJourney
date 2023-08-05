@@ -9,10 +9,10 @@ services:
     image: "daprio/dapr:1.9.4"
 
   daprdotnetjourney.microservices.basket.api:
-    image: cahityusuf/daprdotnetjourneymicroservicesbasketapi:dev
-    build:
-      context: .
-      dockerfile: Dockerfile.BasketApi
+    image: cahityusuf/basketapi:v1.0.0
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile.BasketApi
 
   daprdotnetjourney.microservices.basket.api.dapr:
     image: "daprio/daprd:1.9.4"
@@ -21,10 +21,10 @@ services:
       - daprdotnetjourney.microservices.basket.api
 
   daprdotnetjourney.gateway.aggregator.api:
-    image: cahityusuf/daprdotnetjourneygatewayaggregatorapi:dev
-    build:
-      context: .
-      dockerfile: Dockerfile.Aggregator
+    image: cahityusuf/aggregatorapi:v1.0.0
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile.Aggregator
 
   daprdotnetjourney.gateway.aggregator.api.dapr:
     image: "daprio/daprd:1.9.4"

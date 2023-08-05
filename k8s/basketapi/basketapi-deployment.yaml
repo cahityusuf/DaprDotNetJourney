@@ -19,7 +19,7 @@ spec:
     metadata:
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: basketapi
+        dapr.io/app-id: basket-api
         dapr.io/app-port: "80"
         dapr.io/config: "config"
       labels:
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: basketapi
-        image: cahityusuf/basketapi:v1.0.0
+        image: docker.io/cahityusuf/basket-api:v1.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -38,11 +38,11 @@ spec:
             memory: "500Mi"
             cpu: "0.3"
           limits:
-            memory: "2048Mi"
-            cpu: "1"
+            memory: "500Mi"
+            cpu: "0.5"
         env:
         - name: ASPNETCORE_ENVIRONMENT
-          value: Production
+          value: Development
         - name: ASPNETCORE_URLS
           value: http://+:80
 
