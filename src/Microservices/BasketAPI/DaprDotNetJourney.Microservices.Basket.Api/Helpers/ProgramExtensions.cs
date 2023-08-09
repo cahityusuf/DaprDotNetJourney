@@ -1,6 +1,5 @@
 ﻿using DaprDotNetJourney.Framework.Api.Extensions;
-using DaprDotNetJourney.Microservices.Basket.Abstraction.Services;
-using DaprDotNetJourney.Microservices.Basket.Application.Services;
+using System.Reflection;
 
 namespace DaprDotNetJourney.Microservices.Basket.Api
 {
@@ -19,7 +18,14 @@ namespace DaprDotNetJourney.Microservices.Basket.Api
 
         public static void AddCustomApplicationServices(this WebApplicationBuilder builder)
         {
-            builder.Services.AddScoped<IBasketService, BasketService>();
+            var Assemblies = Directory.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly)
+                   .Where(filePath => Path.GetFileName(filePath).StartsWith("DaprDotNetJourney.Microservices.Basket"))
+                   .Select(Assembly.LoadFrom);
+
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssemblies(Assemblies.ToArray());
+            });
         }
 
         public static WebApplication UseBasketApi(this WebApplication app)

@@ -1,5 +1,6 @@
 ﻿using DaprDotNetJourney.Microservices.Basket.Abstraction.Dtos;
-using DaprDotNetJourney.Microservices.Basket.Abstraction.Services;
+using DaprDotNetJourney.Microservices.Basket.Application.UpdateBasketDetails;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -11,19 +12,20 @@ namespace DaprDotNetJourney.Microservices.Basket.Api.Controllers;
 [AllowAnonymous]
 public class BasketController : ControllerBase
 {
-    private readonly IBasketService _basketService;
+    private readonly IMediator _mediator;
 
-    public BasketController(
-        IBasketService basketService)
+    public BasketController(IMediator mediator)
     {
-        _basketService = basketService;
+        _mediator = mediator;
     }
 
     [HttpPost]
     [ProducesResponseType(typeof(BasketDto), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<BasketDto>> UpdateBasketAsync([FromBody] BasketDto value)
     {
-        return Ok(await _basketService.UpdateBasketAsync(value));
+        var res = await _mediator.Send(new UpdateBasketCommand(value.BuyerId, value.Items));
+
+        return res.Success ? Ok(res) : NoContent();
     }
 
 }
