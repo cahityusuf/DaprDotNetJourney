@@ -1,5 +1,5 @@
 ﻿using DaprDotNetJourney.Microservices.Basket.Abstraction.Dtos;
-using DaprDotNetJourney.Microservices.Basket.Application.UpdateBasketDetails;
+using DaprDotNetJourney.Microservices.Basket.Application.Services.UpdateBasketDetails.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
