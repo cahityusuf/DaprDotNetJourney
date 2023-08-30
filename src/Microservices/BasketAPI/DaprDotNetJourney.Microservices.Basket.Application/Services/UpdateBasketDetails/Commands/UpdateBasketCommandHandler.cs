@@ -12,12 +12,12 @@ namespace DaprDotNetJourney.Microservices.Basket.Application.Services.UpdateBask
         {
             _stateStore = stateStore;
         }
-        private const string DAPR_PUBSUB_NAME = "pubsub";
+        private const string DAPR_STATESTORE_NAME = "statestore";
         public async Task<Result<BasketDto>> Handle(UpdateBasketCommand request, CancellationToken cancellationToken)
         {
-            await _stateStore.UpdateStateAsync(DAPR_PUBSUB_NAME, request.BuyerId, request);
+            await _stateStore.UpdateStateAsync(DAPR_STATESTORE_NAME, request.BuyerId, request);
 
-            var basket = await _stateStore.GetStateAsync<BasketDto>(DAPR_PUBSUB_NAME, request.BuyerId);
+            var basket = await _stateStore.GetStateAsync<BasketDto>(DAPR_STATESTORE_NAME, request.BuyerId);
 
             return new SuccessResult<BasketDto>(basket)
             {

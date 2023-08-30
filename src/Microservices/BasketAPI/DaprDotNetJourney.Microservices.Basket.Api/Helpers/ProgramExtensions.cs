@@ -1,4 +1,5 @@
 ﻿using DaprDotNetJourney.Framework.Api.Extensions;
+using DaprDotNetJourney.Framework.Dapr.Extensions;
 using System.Reflection;
 
 namespace DaprDotNetJourney.Microservices.Basket.Api
@@ -12,7 +13,7 @@ namespace DaprDotNetJourney.Microservices.Basket.Api
             builder.AddCustomMvc();
             builder.AddCustomAuthentication();
             builder.AddCustomApplicationServices();
-            builder.ConfigureStateStore();
+            builder.AddConfigureStateStore();
             return builder;
         }
 

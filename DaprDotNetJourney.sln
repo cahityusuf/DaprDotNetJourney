@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C483880D-1DD1-46DD-AF59-008CD54BA6FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{818EA871-70D9-4BB7-BD99-F90EABCA1303}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\statestore.yaml = dapr\components\statestore.yaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{391ECD26-CE5F-46E5-B610-822F9FC49325}"
 	ProjectSection(SolutionItems) = preProject
@@ -68,7 +71,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingress", "Ingress", "{67B8
 		k8s\ingress\zipkin-ingress.yaml = k8s\ingress\zipkin-ingress.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprDotNetJourney.Framework.Dapr", "src\Framework\DaprDotNetJourney.Framework.Dapr\DaprDotNetJourney.Framework.Dapr.csproj", "{3DAAE49F-9586-4000-8EB0-659E571F33FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Framework.Dapr", "src\Framework\DaprDotNetJourney.Framework.Dapr\DaprDotNetJourney.Framework.Dapr.csproj", "{3DAAE49F-9586-4000-8EB0-659E571F33FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
