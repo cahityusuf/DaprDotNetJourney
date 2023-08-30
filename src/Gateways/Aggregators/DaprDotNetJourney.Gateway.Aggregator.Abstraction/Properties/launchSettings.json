@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DaprDotNetJourney.Gateway.Aggregator.Abstraction": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:51434;http://localhost:51436"
+    }
+  }
+}

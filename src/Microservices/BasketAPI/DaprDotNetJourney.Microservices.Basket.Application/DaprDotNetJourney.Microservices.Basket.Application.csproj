@@ -14,7 +14,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Framework\DaprDotNetJourney.Framework.Abstractions\DaprDotNetJourney.Framework.Abstractions.csproj" />
-	  <ProjectReference Include="..\..\..\Framework\DaprDotNetJourney.Framework.Dapr\DaprDotNetJourney.Framework.Dapr.csproj" />
 	  <ProjectReference Include="..\DaprDotNetJourney.Microservices.Basket.Abstraction\DaprDotNetJourney.Microservices.Basket.Abstraction.csproj" />
 	</ItemGroup>
 

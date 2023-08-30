@@ -12,7 +12,7 @@ namespace DaprDotNetJourney.Microservices.Basket.Api
             builder.AddCustomMvc();
             builder.AddCustomAuthentication();
             builder.AddCustomApplicationServices();
-
+            builder.ConfigureStateStore();
             return builder;
         }
 

@@ -1,15 +1,13 @@
-﻿using DaprDotNetJourney.Framework.Dapr.Abstractions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Builder;
 
-namespace DaprDotNetJourney.Framework.Dapr.Extensions;
-
-public static class DaprServiceCollectionExtensions
+namespace DaprDotNetJourney.Framework.Dapr.Extensions
 {
-    public static void ConfigureStateStore(this IServiceCollection services)
+    public static class DaprServiceCollectionExtensions
     {
-        services.AddScoped<IDaprStateStore>(sp => new DaprStateStore(sp.GetRequiredService<ILogger<DaprStateStore>>()));
-    }
+        public static void ConfigureStateStore(this WebApplicationBuilder builder)
+        {
+            //services.AddScoped<IDaprStateStore>(sp => new DaprStateStore(sp.GetRequiredService<ILogger<DaprStateStore>>()));
+        }
 
+    }
 }
