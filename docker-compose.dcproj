@@ -6,7 +6,7 @@
     <ProjectGuid>220404af-831b-4611-9e3e-015380a7722c</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>daprdotnetjourney.microservices.basket.api</DockerServiceName>
+    <DockerServiceName>daprdotnetjourney.gateway.aggregator.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
