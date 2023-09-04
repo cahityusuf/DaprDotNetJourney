@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -9,10 +9,12 @@
 	<ItemGroup>
 		<PackageReference Include="Dapr.Client" Version="1.10.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="MediatR" Version="12.1.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Framework\DaprDotNetJourney.Framework.Abstractions\DaprDotNetJourney.Framework.Abstractions.csproj" />
+	  <ProjectReference Include="..\..\..\Framework\DaprDotNetJourney.Framework.Dapr\DaprDotNetJourney.Framework.Dapr.csproj" />
 	  <ProjectReference Include="..\DaprDotNetJourney.Microservices.Basket.Abstraction\DaprDotNetJourney.Microservices.Basket.Abstraction.csproj" />
 	</ItemGroup>
 

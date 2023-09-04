@@ -9,19 +9,16 @@ namespace DaprDotNetJourney.Gateway.Aggregator.Application.Services
 {
     public class BasketService: IBasketService
     {
+        private readonly HttpClient _httpClient;
 
+        public BasketService(HttpClient httpClient)
+        {
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+        }
         public async Task<Result<BasketDto>> CreateAsync(BasketDto basket)
         {
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "api/v1/basket")
-            {
-                Content = JsonContent.Create(basket)
-            };
-
-            var httpClient = DaprClient.CreateInvokeHttpClient("basket-api");
-
-            var response = await httpClient.SendAsync(request);
-
+            var response = await _httpClient.PostAsJsonAsync("api/v1/basket", basket);
 
             if (response.IsSuccessStatusCode)
             {

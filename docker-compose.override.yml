@@ -1,6 +1,22 @@
 version: '3.4'
 
+volumes:
+  redis:
+  redisinsight:
+
 services:
+
+  redis:
+    ports:
+      - "5379:6379"
+    volumes:
+      - redis:/data
+
+  redisinsight:
+    ports:
+      - 8081:8001
+    volumes:
+      - redisinsight:/db
 
   zipkin:
     ports:
@@ -21,11 +37,13 @@ services:
 
   daprdotnetjourney.microservices.basket.api.dapr:
     command: ["./daprd",
-      "-app-id", "daprdotnetjourney.microservices.basket.api",
+      "-app-id", "basket-api",
       "-app-port", "80",
+      "-components-path", "/components",
       "-config", "/configuration/config.yaml"
       ]
     volumes:
+      - "./dapr/components/:/components"
       - "./dapr/configuration/:/configuration"
 
   daprdotnetjourney.gateway.aggregator.api:
@@ -38,9 +56,11 @@ services:
 
   daprdotnetjourney.gateway.aggregator.api.dapr:
     command: ["./daprd",
-      "-app-id", "daprdotnetjourney.gateway.aggregator.api",
+      "-app-id", "aggregator-api",
       "-app-port", "80",
+      "-components-path", "/components",
       "-config", "/configuration/config.yaml"
       ]
     volumes:
+      - "./dapr/components/:/components"
       - "./dapr/configuration/:/configuration"

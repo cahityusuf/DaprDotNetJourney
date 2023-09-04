@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{C483880D-1DD1-46DD-AF59-008CD54BA6FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{818EA871-70D9-4BB7-BD99-F90EABCA1303}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\statestore.yaml = dapr\components\statestore.yaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{391ECD26-CE5F-46E5-B610-822F9FC49325}"
 	ProjectSection(SolutionItems) = preProject
@@ -68,6 +71,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingress", "Ingress", "{67B8
 		k8s\ingress\zipkin-ingress.yaml = k8s\ingress\zipkin-ingress.yaml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaprDotNetJourney.Framework.Dapr", "src\Framework\DaprDotNetJourney.Framework.Dapr\DaprDotNetJourney.Framework.Dapr.csproj", "{3DAAE49F-9586-4000-8EB0-659E571F33FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +115,10 @@ Global
 		{220404AF-831B-4611-9E3E-015380A7722C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{220404AF-831B-4611-9E3E-015380A7722C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{220404AF-831B-4611-9E3E-015380A7722C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAAE49F-9586-4000-8EB0-659E571F33FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAAE49F-9586-4000-8EB0-659E571F33FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAAE49F-9586-4000-8EB0-659E571F33FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAAE49F-9586-4000-8EB0-659E571F33FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +139,7 @@ Global
 		{5C2ABDDF-6A27-46A7-B7E3-C22D25C4EE80} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
 		{F463CD69-11CA-4DBD-95BA-98AF7E220571} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
 		{67B85340-05C0-4FFC-ADB7-38A5D6DEB94F} = {ACCF989C-6B2C-4B4A-8FC3-D54340DF890A}
+		{3DAAE49F-9586-4000-8EB0-659E571F33FC} = {B58F4743-DF43-4F2F-B9F9-F17AA1918FAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC37AB1C-64B4-40F4-92EA-0DE7B6508029}

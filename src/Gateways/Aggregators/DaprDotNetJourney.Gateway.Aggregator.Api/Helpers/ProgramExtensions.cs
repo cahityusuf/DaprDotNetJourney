@@ -1,4 +1,5 @@
-﻿using DaprDotNetJourney.Framework.Api.Extensions;
+﻿using Dapr.Client;
+using DaprDotNetJourney.Framework.Api.Extensions;
 using DaprDotNetJourney.Gateway.Aggregator.Abstraction.Services;
 using DaprDotNetJourney.Gateway.Aggregator.Application.Services;
 
@@ -20,7 +21,8 @@ namespace Web.HttpAggregator.Api.Helpers
         public static void AddCustomApplicationServices(this WebApplicationBuilder builder)
         {
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            builder.Services.AddScoped<IBasketService, BasketService>();
+            builder.Services.AddScoped<IBasketService, BasketService>(
+                _ => new BasketService(DaprClient.CreateInvokeHttpClient("basket-api")));
         }
 
         public static WebApplication UseHttpAggregatorApi(this WebApplication app)
