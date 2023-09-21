@@ -19,7 +19,7 @@ spec:
     metadata:
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: aggregator
+        dapr.io/app-id: aggregator-api
         dapr.io/app-port: "80"
         dapr.io/config: "config"
       labels:

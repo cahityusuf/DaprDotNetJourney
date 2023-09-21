@@ -4,7 +4,7 @@ metadata:
   name: daprdotnetjourney-ingress
   namespace: daprdotnetjourney
   annotations:
-    kubernetes.io/ingress.class: "nginx"
+    ingress.class: "nginx"
 spec:
   ingressClassName: nginx
   rules:
